@@ -71,3 +71,4 @@ class UserPlacesNotifier extends StateNotifier<List<Place>> {
 //     StateNotifierProvider<UserPlacesNotifier, List<Place>>(
 //   (ref) => UserPlacesNotifier(),
 // );
+00
