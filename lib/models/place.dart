@@ -10,6 +10,7 @@ class PlaceLocation {
     required this.longitude,
     required this.address,
   });
+  //gayathri
 
   final double latitude;
   final double longitude;
