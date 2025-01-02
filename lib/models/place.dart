@@ -28,4 +28,4 @@ class Place {
   final String title;
   final File image;
   final PlaceLocation location;
-} hello world
+}
