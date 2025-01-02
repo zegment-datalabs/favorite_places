@@ -41,31 +41,31 @@ class _MapScreenState extends State<MapScreen> {
             ),
         ],
       ),
-      // body: GoogleMap(
-      //   onTap: widget.isSelecting
-      //       ? (position) {
-      //           setState(() {
-      //             _pickedLocation = position;
-      //           });
-      //         }
-      //       : null,
-      //   initialCameraPosition: CameraPosition(
-      //     target: LatLng(
-      //       widget.location.latitude,
-      //       widget.location.longitude,
-      //     ),
-      //     zoom: 16,
-      //   ),
-      //   markers: (_pickedLocation == null && widget.isSelecting)
-      //       ? {}
-      //       : {
-      //           Marker(
-      //             markerId: const MarkerId('m1'),
-      //             position: _pickedLocation ??
-      //                 LatLng(
-      //                   widget.location.latitude,
-      //                   widget.location.longitude,
-      //                 ),
+      body: GoogleMap(
+        onTap: widget.isSelecting
+            ? (position) {
+                setState(() {
+                  _pickedLocation = position;
+                });
+              }
+            : null,
+        initialCameraPosition: CameraPosition(
+          target: LatLng(
+            widget.location.latitude,
+            widget.location.longitude,
+          ),
+          zoom: 16,
+        ),
+        markers: (_pickedLocation == null && widget.isSelecting)
+            ? {}
+            : {
+                Marker(
+                  markerId: const MarkerId('m1'),
+                  position: _pickedLocation ??
+                      LatLng(
+                        widget.location.latitude,
+                        widget.location.longitude,
+                      ),
                 ),
               },
       ),
